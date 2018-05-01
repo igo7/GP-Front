@@ -16,23 +16,49 @@ export class TankService {
     }
 
     getTanks(): Promise<Array<Object>> {
-        return;
+        return this.http.get(`${this.apiUrl}/tank`)
+            .toPromise()
+            .then((resp) => {
+                let tanks = resp.json();
+                return tanks;
+            });
     }
 
     getTankById(tankId): Promise<Object> {
-        return;
+        return this.http.get(`${this.apiUrl}/tank/id/${tankId}`)
+            .toPromise()
+            .then((resp) => {
+                let tank = resp.json();
+                return tank;
+            });
     }
 
     addTank(tank): Promise<Object> {
-        return;
+        return this.http.post(`${this.apiUrl}/tank`, tank)
+            .toPromise()
+            .then((resp) => {
+                let tank = resp.json();
+                return tank;
+            });
     }
 
     deleteTank(id): Promise<Object> {
-        return;
+        return this.http.delete(`${this.apiUrl}/tank/id/${id}`)
+            .toPromise()
+            .then((resp) => {
+                let status = resp.json();
+                return status;
+            });
     }
 
     updateTank(id, tank): Promise<Object> {
-        return;
+        return this.http.put(`${this.apiUrl}/tank/id/${id}`, tank)
+            .toPromise()
+            .then((resp) => {
+                let tank = resp.json();
+                return tank;
+            });
     }
+
 
 }
