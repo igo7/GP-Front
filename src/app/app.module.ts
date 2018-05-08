@@ -16,6 +16,7 @@ import { DocsComponent } from './docs/docs.component';
 import { DocsButtonsComponent } from './docs/docs-buttons/docs-buttons.component';
 
 import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 // books
 import { BookService } from './books/book.service';
@@ -39,6 +40,7 @@ import { UserCreateComponent } from './users/user-create/user-create.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'aboutus', component: AboutusComponent },
   { path: 'docs', component: DocsComponent },
   // books
   { path: 'books', component: BooksComponent },
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
     DocsComponent,
     DocsButtonsComponent,
     HomeComponent,
+    AboutusComponent,
     // books
     BooksComponent,
     BookCreateComponent,
