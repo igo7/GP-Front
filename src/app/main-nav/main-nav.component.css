@@ -1,3 +1,16 @@
 .is-active {
     opacity:0.6;
 }
+
+.mat-raised-button {
+    background-color: whitesmoke;
+    color:black;
+}
+
+.mat-toolbar {
+    background-color: white;
+}
+
+.mat-toolbar-row {
+    color: black;
+}

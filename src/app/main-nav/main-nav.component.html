@@ -1,18 +1,18 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <div class="button-row">
-      <span>Book App</span>&nbsp;&nbsp;
+      <span>Book Application</span>&nbsp;&nbsp;
       <button mat-raised-button color="primary" [routerLink]="['home']" [routerLinkActive]="['is-active']">
-        Home<mat-icon class="example-icon">home</mat-icon>
+        <mat-icon class="example-icon">home</mat-icon> Home 
       </button>
-      <button mat-raised-button color="accent" [routerLink]="['books']" [routerLinkActive]="['is-active']">
-        Books<mat-icon class="example-icon">book</mat-icon>
+      <button mat-raised-button color="primary" [routerLink]="['books']" [routerLinkActive]="['is-active']">
+        <mat-icon class="example-icon">books</mat-icon> Books
       </button>
       <button mat-raised-button color="accent" [routerLink]="['tanks']" [routerLinkActive]="['is-active']">
-        Tanks<mat-icon class="example-icon">local_drink</mat-icon>
+        About Us <mat-icon class="example-icon">people</mat-icon>
       </button>
-      <button mat-raised-button color="accent" [routerLink]="['users']" [routerLinkActive]="['is-active']">
-        Users<mat-icon class="example-icon">local_drink</mat-icon>
+      <button mat-raised-button color="accent" class="pull-right" [routerLink]="['users']" [routerLinkActive]="['is-active']">
+        <mat-icon class="example-icon">person</mat-icon> Users
       </button>
       <button mat-raised-button color="accent" class="pull-right" [routerLink]="['docs']" [routerLinkActive]="['is-active']">
         Documentation<mat-icon class="example-icon">insert_drive_file</mat-icon>

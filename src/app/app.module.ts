@@ -24,10 +24,10 @@ import { BooksComponent } from './books/books.component';
 import { BookCreateComponent } from './books/book-create/book-create.component';
 
 // tanks
-import { TankService } from './tanks/tank.service';
-import { TankComponent } from './tanks/tank/tank.component';
-import { TanksComponent } from './tanks/tanks.component';
-import { TankCreateComponent } from './tanks/tank-create/tank-create.component';
+// import { TankService } from './tanks/tank.service';
+// import { TankComponent } from './tanks/tank/tank.component';
+// import { TanksComponent } from './tanks/tanks.component';
+// import { TankCreateComponent } from './tanks/tank-create/tank-create.component';
 
 // users
 import { UserService } from './users/user.service';
@@ -45,9 +45,9 @@ const appRoutes: Routes = [
   { path: 'book/:id', component: BookComponent },
   { path: 'book-create', component: BookCreateComponent },
   // tanks
-  { path: 'tanks', component: TanksComponent },
-  { path: 'tank/:id', component: TankComponent },
-  { path: 'tank-create', component: TankCreateComponent },
+  // { path: 'tanks', component: TanksComponent },
+  // { path: 'tank/:id', component: TankComponent },
+  // { path: 'tank-create', component: TankCreateComponent },
   // users
   { path: 'users', component: UsersComponent },
   { path: 'user/:id', component: UserComponent },
@@ -67,9 +67,9 @@ const appRoutes: Routes = [
     BookCreateComponent,
     BookComponent,
     // tanks
-    TanksComponent,
-    TankCreateComponent,
-    TankComponent,
+    // TanksComponent,
+    // TankCreateComponent,
+    // TankComponent,
     // users
     UserComponent,
     UsersComponent,
@@ -85,7 +85,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     BookService,
-    TankService,
+    // TankService,
     UserService
   ],
   bootstrap: [AppComponent]

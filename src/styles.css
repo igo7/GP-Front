@@ -63,3 +63,20 @@ body {
   .list-cover-image {
     max-height: 250px;
   }
+
+.mat-toolbar {
+  color: black;
+  background-color: white;
+}
+.mat-toolbar-row {
+  background-color: white;
+}
+
+.title {
+  color:black;
+}
+
+.mat-fab.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+  background-color: rgb(224, 255, 250);
+  color:black;
+}
