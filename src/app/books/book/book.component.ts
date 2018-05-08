@@ -28,8 +28,8 @@ export class BookComponent implements OnInit {
 
   updateBook(book: any) {
     // console.log('book', book);
-    const bookID = book.id;
-    delete book.id;
+    const bookID = book._id;
+    delete book._id;
     this.bookService.updateBook(bookID, book).then((resp) => {
       // console.log('resp', resp);
       if (resp) {

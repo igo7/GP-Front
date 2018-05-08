@@ -16,7 +16,7 @@ export class BookService {
     }
 
     getBooks(): Promise<Array<Object>> {
-        return this.http.get(`${this.apiUrl}/book`)
+        return this.http.get(`${this.apiUrl}/books`)
             .toPromise()
             .then((resp) => {
                 let books = resp.json();
@@ -26,7 +26,7 @@ export class BookService {
     }
 
     getBookById(bookId): Promise<Object> {
-        return this.http.get(`${this.apiUrl}/book/id/${bookId}`)
+        return this.http.get(`${this.apiUrl}/books/id/${bookId}`)
             .toPromise()
             .then((resp) => {
                 let book = resp.json();
@@ -36,7 +36,7 @@ export class BookService {
     }
 
     addBook(book): Promise<Object> {
-        return this.http.post(`${this.apiUrl}/book`, book)
+        return this.http.post(`${this.apiUrl}/books`, book)
             .toPromise()
             .then((resp) => {
                 let book = resp.json();
@@ -47,7 +47,7 @@ export class BookService {
 
     deleteBook(id): Promise<Object> {
         // console.log(`from book.service delete method......`);
-        return this.http.delete(`${this.apiUrl}/book/id/${id}`)
+        return this.http.delete(`${this.apiUrl}/books/id/${id}`)
             .toPromise()
             .then((resp) => {
                 let status = resp.json();
@@ -57,7 +57,7 @@ export class BookService {
     }
 
     updateBook(id, book): Promise<Object> {
-        return this.http.put(`${this.apiUrl}/book/id/${id}`, book)
+        return this.http.put(`${this.apiUrl}/books/id/${id}`, book)
             .toPromise()
             .then((resp) => {
                 let book = resp.json();

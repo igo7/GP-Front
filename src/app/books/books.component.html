@@ -20,17 +20,17 @@
       </mat-toolbar>
       <img class="list-cover-image" mat-card-image [src]="book.image_url" alt="book">
       <mat-card-content>
-        <p>ID: {{book.id}}</p>
+        <p>ID: {{book._id}}</p>
         <P>Author: {{book.author}}</P>
         <P>Genre: {{book.genre}}</P>
         <P>Read: {{book.read}}</P>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button (click)="deleteBook(book.id)" color="warn">
+        <button mat-raised-button (click)="deleteBook(book._id)" color="warn">
           Delete
           <mat-icon class="example-icon">clear</mat-icon>
         </button>
-        <button mat-raised-button color="accent" [routerLink]="['/book',book.id]">
+        <button mat-raised-button color="accent" [routerLink]="['/book',book._id]">
           Edit
           <mat-icon class="example-icon">edit</mat-icon>
         </button>
