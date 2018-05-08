@@ -76,7 +76,7 @@ const appRoutes: Routes = [
     // users
     UserComponent,
     UsersComponent,
-    UserCreateComponent
+    UserCreateComponent,
   ],
   imports: [
     BrowserModule,

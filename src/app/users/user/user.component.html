@@ -24,6 +24,10 @@
         </mat-form-field>
 
         <mat-form-field class="input">
+          <input [(ngModel)]="user.password" matInput placeholder="Password" required>
+        </mat-form-field>
+
+        <mat-form-field class="input">
           <input [(ngModel)]="user.image_url" matInput placeholder="Cover Image URL" required>
         </mat-form-field>
       </div>
