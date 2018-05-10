@@ -25,8 +25,8 @@ export class UserComponent implements OnInit {
   }
 
   updateUser(user: any) {
-    const userID = user.id;
-    delete user.id;
+    const userID = user._id;
+    delete user._id;
     this.userService.updateUser(userID, user).then((resp) => {
       if (resp) {
         this.router.navigate(['users']);

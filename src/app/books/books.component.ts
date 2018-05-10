@@ -39,10 +39,13 @@ export class BooksComponent implements OnInit {
   deleteBook(id:string) {
     console.log(`deleting book with id of : ${id}`);
     this.bookService.deleteBook(id).then((resp) => {
-      if(resp) {
+      if (resp["status"] === "success") {
         this.books = this.books.filter((book) => {
-          return book['id'] != id;
+          return book['_id'] !== id;
         });
+      }
+      else {
+        console.log("There was a delete error.");
       }
     });
   }

@@ -22,6 +22,7 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
     this.users = [];
     this.getUsers();
+    console.log('users', this.users);
   }
 
   getUsers() {
@@ -31,15 +32,20 @@ export class UsersComponent implements OnInit {
   }
 
   goToCreate() {
+    console.log('go to create....;');
     this.router.navigate(['user-create']);
   }
 
   deleteUser(id:string) {
+    console.log(`deleting user with id of : ${id}`);
     this.userService.deleteUser(id).then((resp) => {
-      if(resp) {
+      if (resp["status"] === "success") {
         this.users = this.users.filter((user) => {
-          return user['id'] != id;
+          return user['_id'] !== id;
         });
+      }
+      else {
+        console.log("There was a delete error.");
       }
     });
   }
