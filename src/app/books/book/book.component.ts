@@ -3,7 +3,7 @@ import { BookService } from '../book.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-book',
+  selector: 'book',
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
